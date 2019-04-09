@@ -5,7 +5,7 @@ services:
   - docker
 after_success:
   - bin/docker_push.sh
-script: yarn start
+script: yarn build
 addons:
   apt:
     packages:
