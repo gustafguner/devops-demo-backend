@@ -12,7 +12,7 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker build -t $IMAGE_NAME .
     echo "Pushing $IMAGE_NAME:latest"
     docker tag $IMAGE_NAME:latest $DOCKER_HUB_IMAGE_NAME:${TRAVIS_COMMIT}
-    docker push devopskth/demo-backend:${TRAVIS_COMMIT}
+    docker push $DOCKER_HUB_IMAGE_NAME:${TRAVIS_COMMIT}
     echo "Pushed $IMAGE_NAME:${TRAVIS_COMMIT}"
   else
     echo "Skipping deploy because branch is not 'master'"
