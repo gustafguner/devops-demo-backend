@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/version', (req, res) => {
-  res.send({ version: 1.3 });
+  res.send({ version: 1.4 });
 });
 
 app.listen(port, (err: any) => {
