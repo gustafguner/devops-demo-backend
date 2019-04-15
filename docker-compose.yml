@@ -1,0 +1,18 @@
+# prettier-ignore
+version: "3.3"
+
+services:
+  backend:
+    image: devopskth/demo-backend:66926a5871c935e2cf04b7e9aa6ecffc70c9da93
+    ports: 
+      - 3000:3000
+    networks: 
+      demo:
+  frontend:
+    image: devopskth/demo-frontend:e4c851f989881ce127408cb13da55149aef85084
+    ports: 
+      - 80:80
+    networks: 
+      demo:
+networks:
+  demo:
