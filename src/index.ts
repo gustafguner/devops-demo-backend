@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
   res.send('Hello world!!111fem');
 });
 
+app.get('/version', (req, res) => {
+  res.send({ version: 1.0 });
+});
+
 app.listen(port, (err: any) => {
   if (err) {
     return console.log(err);
