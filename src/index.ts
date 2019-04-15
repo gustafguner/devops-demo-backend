@@ -1,7 +1,10 @@
 import * as express from 'express';
+import * as cors from 'cors';
 
 const port = process.env.PORT || 3000;
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello world!!111fem');
