@@ -22,7 +22,7 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     kubectl config view
     kubectl config current-context
 
-    kubectl set image deployment/backend-deployment backend-container=${DOCKER_HUB_IMAGE_NAME}:${TRAVIS_COMMIT}
+    kubectl set image deployment/backend-deployment backend-container=${DOCKER_HUB_IMAGE_NAME}:${TRAVIS_COMMIT} --record=true
   else
     echo "Skipping deploy because branch is not 'master'"
   fi
